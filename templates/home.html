@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{%static 'css/home.css'%}">
+
+</head>
+<body>
+
+<form action = "Index", method="post">
+    {% csrf_token %}
+  <div class="container">
+    <h2>Predict Your Loan Status</h2>
+    <p>Please fill the form to predict the status.</p>
+    <hr>
+
+    <label><b>Select Gender</b></label><br><br>
+
+        <select name = "gender" class = "select-css" >
+        <option value = 1>Male</option>
+        <option value =  0>Female</option>
+        </select>
+      <br>
+      <br>
+
+    <label><b>Married</b></label><br><br>
+
+        <select name = "married" class = "select-css">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+        </select>
+      <br>
+      <br>
+
+        <label ><b>Dependents</b></label><br><br>
+
+        <select name = "dep" class = "select-css" >
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="4">3+</option>
+        </select>
+      <br>
+      <br>
+
+        <label><b>Education</b></label><br><br>
+
+        <select name = "edu" class = "select-css">
+          <option value="0">Graduate</option>
+          <option value="1">Not Graduate</option>
+        </select>
+      <br>
+      <br>
+
+
+        <label><b>Self Employed</b></label><br><br>
+
+        <select name = "self" class = "select-css">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      <br>
+      <br>
+
+
+    <label><b>Applicant Income Per Month</b></label><br>
+    <input type="number" placeholder="In Dollars" name="income" required>
+
+    <label><b>Coapplicant Income Per Month</b></label><br>
+    <input type="number" placeholder="In Dollars" name="coincome" required>
+
+    <label><b>Loan Amount</b></label><br>
+    <input type="number" placeholder="In Thousands. Ex 128 indicates 128000" name="lamount" required>
+
+    <label><b>Loan Amount Term</b></label><br>
+    <input type="number" placeholder="In Months" name="term" required>
+
+
+   <label><b>Credit History</b></label><br><br>
+
+          <select name = "credit" class = "select-css">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        <br>
+        <br>
+
+
+     <label><b>Property Area</b></label><br><br>
+
+        <select name = "area" class = "select-css" >
+          <option value="urban">Urban</option>
+          <option value="rural">Rural</option>
+          <option value="semi">Semi Urban</option>
+        </select>
+      <br>
+      <br>
+
+
+    <hr>
+
+    <button type="submit" class="myButton">Predict</button>
+  </div>
+
+  <div class="container signin">
+  </div>
+</form>
+
+</body>
+</html>

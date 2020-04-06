@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Status Prediction</div>
+      {% if messages %}
+    {% for message in messages %}
+      <br>
+      <br>
+      <center>{{message}}
+          <br>
+          <br>
+          <br>
+
+
+
+      </center>
+    {% endfor %}
+{% endif %}
+
+</div>
+
+
+
+</body>
+
+</html>
